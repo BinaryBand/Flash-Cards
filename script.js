@@ -6,6 +6,9 @@ window.onload = () => {
     // console.log(translations);
 }
 
+/*
+
+*/
 function checkAnswer(userInput) {
     let answerElement = document.getElementById("answer");
     let correct = userInput == answerElement.innerHTML;

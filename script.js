@@ -8,21 +8,23 @@ window.onload = preparePage;
 
 
 /**
- * @desc 
+ * @desc Load top 1000 esperanto words.
  */
 async function preparePage() {
 
     let vocabulary = await loadWords();
     let keys = Object.keys(vocabulary);
 
-    questionLoop();
+    questionLoop(vocabulary, keys);
 }
 
 
 /**
- * 
+ * @desc Display flash cards.
+ * @param {dictionary} vocabulary - Common English words and their Esperanto equivalents.
+ * @param {list} keys - A list of common English words.
  */
-async function questionLoop() {
+async function questionLoop(vocabulary, keys) {
 
     while (true) {
 
